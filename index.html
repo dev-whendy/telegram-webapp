@@ -1,32 +1,145 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Telegram WebApp</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>White Haze Store | Северодвинск</title>
   <style>
     body {
-      background-color: #121212;
-      color: #fff;
+      margin: 0;
       font-family: sans-serif;
+      background: #fff;
+      color: #000;
+    }
+    .top-bar {
+      padding: 10px;
+      background: #f5f1fc;
       display: flex;
       align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #ddd;
+    }
+    .search-bar {
+      margin: 10px;
+      display: flex;
       justify-content: center;
-      height: 100vh;
-      margin: 0;
     }
-    .container {
+    .search-bar input {
+      width: 100%;
+      max-width: 400px;
+      padding: 8px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+    .tabs {
+      display: flex;
+      justify-content: space-around;
+      background: #f5f1fc;
+      padding: 10px 0;
+      font-weight: bold;
+    }
+    .categories {
+      display: flex;
+      overflow-x: auto;
+      padding: 10px;
+      gap: 10px;
+    }
+    .categories button {
+      padding: 5px 10px;
+      border: none;
+      border-radius: 20px;
+      background: #f1f1f1;
+      color: #333;
+      cursor: pointer;
+    }
+    .product-list {
+      padding: 10px;
+    }
+    .product {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid #eee;
+      padding: 10px 0;
+    }
+    .product img {
+      width: 60px;
+      height: auto;
+      border-radius: 10px;
+    }
+    .product-info {
+      flex: 1;
+    }
+    .price {
+      color: #e91e63;
+      font-weight: bold;
+    }
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+      background: #fff;
+      border-top: 1px solid #ddd;
+    }
+    .bottom-nav div {
       text-align: center;
-    }
-    h1 {
-      font-size: 2rem;
+      font-size: 12px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Добро пожаловать в Telegram WebApp!</h1>
-    <p>Это мини-приложение, открытое через Telegram бота.</p>
+  <div class="top-bar">
+    <span>&lt; Северодвинск</span>
+    <span>В магазине</span>
+  </div>
+  <div class="search-bar">
+    <input type="text" placeholder="Доставка">
+  </div>
+  <div class="tabs">
+    <div>Доставка</div>
+    <div style="color: hotpink;">Адрес доставки &gt;</div>
+  </div>
+  <div class="categories">
+    <button>Одноразовые сигареты</button>
+    <button>Жидкости</button>
+    <button>POD системы</button>
+    <button>Комплектующие POD систем</button>
+    <button>Картриджи</button>
+    <button>Снюс</button>
+  </div>
+
+  <div class="product-list">
+    <div class="product">
+      <img src="https://via.placeholder.com/60x120" alt="Elf Bar">
+      <div class="product-info">
+        <div><strong>Elf Bar Nic King 30000</strong></div>
+        <div>Кол-во затяжек: 30000</div>
+        <div>Подзарядка: USB Type-C</div>
+        <div class="price">2 499 ₽</div>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://via.placeholder.com/60x120" alt="Waka">
+      <div class="product-info">
+        <div><strong>Waka 28000</strong></div>
+        <div>Кол-во затяжек: 28000</div>
+        <div>Подзарядка: USB Type-C</div>
+        <div class="price">2 499 ₽</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-nav">
+    <div>📦<br>Каталог</div>
+    <div>❤️<br>Избранное</div>
+    <div>🎮<br>Игра</div>
+    <div>👤<br>Профиль</div>
+    <div>🛒<br>Корзина</div>
   </div>
 </body>
 </html>
